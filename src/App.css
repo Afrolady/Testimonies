@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
-}
+/* "*" Es el selector universal que va a aplicar el estilo css a todos los elementos de la aplicacion*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+  margin: 0;
+  padding: 0;
   }
+
+html, 
+body {
+  font-size: 18px;
+  background-color: #f5f6f7; /*blanco grisaseo*/
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  max-width: 940px;
+  font-size: 2.5em; /*em es un factor relativo al tamaño de la letra del contenedor.  si el contenedor tiene 10 pixeles, este va a ser 2.5  veces ese valor. asi se hace relativo y no fijo*/
+  font-family: Lato, sans-serif; /*sans-serif se utiliza por default por si el navegador no identifica el tipo de letra que se asigna anteriormente*/
+  font-weight: 700; /*700 es letra gruesa*/
+  line-height: 1.1; /*altura de las lineas*/
+  margin: 40px 0; 
+}
+
+.App {
+  min-height: 100vh; /*vh: view per height.  Esto permite que se adapte a la altura del navegador. Que en la aplicacion minimo va a tomar el 100% de la pantalla verticalmente */
+  display: flex; /*flex-box es una herramienta que tenemos en css para definir como se van a ubicar los elementos dentro del contenedor*/
+  flex-wrap: wrap; /*Si un elemento toma todo el ancho del contenedor los otros elementos van a ubicarse en la siguiente linea */
+  align-items: center; /*se van a alinear en el centro verticalmente*/
+  justify-content: center; /* se va a centrar horizontalmente*/
+  text-align: center; /* el texto se alinea en el centro*/
+}
+
+.contenedor-principal {
+  min-height: 600px; /*El contenedor se encoje o se estira dependiendo la cantidad de testimonios que hayan*/
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*2 11 49*/
